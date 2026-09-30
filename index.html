@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REEL ESTATE VIEW HURGHADA - Videos Inmobiliarios de Alto Impacto</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0a0b0e',
+                        cardBg: '#12141c',
+                        cardHover: '#1a1d28',
+                        gold: {
+                            400: '#F3C623',
+                            500: '#D4AF37',
+                            600: '#AA8C2C'
+                        },
+                        vodafone: '#E60000'
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0a0b0e;
+            color: #e2e8f0;
+        }
+        .hero-glow {
+            background: radial-gradient(circle at 50% 20%, rgba(212, 175, 55, 0.12) 0%, rgba(10, 11, 14, 0) 70%);
+        }
+        .card-border {
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .card-border-gold {
+            border: 1px solid rgba(212, 175, 55, 0.4);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF 0%, #D4AF37 50%, #F3C623 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-btn {
+            background: linear-gradient(135deg, #D4AF37 0%, #F3C623 100%);
+            color: #0a0b0e;
+        }
+        .gold-btn:hover {
+            filter: brightness(1.1);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0b0e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1f2430;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4AF37;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-gold-500 selection:text-black">
+
+    <!-- Top Discount Promo Banner -->
+    <div id="promo-banner" class="bg-gradient-to-r from-gold-600 via-gold-500 to-amber-600 text-black px-4 py-2 text-center text-xs sm:text-sm font-bold flex items-center justify-between z-50 relative">
+        <div class="flex-1 text-center flex items-center justify-center gap-2">
+            <span class="bg-black text-gold-400 px-2 py-0.5 rounded-md text-[11px] uppercase tracking-wider font-extrabold">OFERTA 1ª VEZ</span>
+            <span>¿Es tu primera vez con nosotros? ¡Obtén <strong>15% DE DESCUENTO</strong> con el código <code class="bg-black/20 px-1.5 py-0.5 rounded text-white font-mono">WELCOME15</code>!</span>
+            <button onclick="applyDiscountDirectly()" class="underline ml-2 hover:text-white transition-colors cursor-pointer">Usar Ahora</button>
+        </div>
+        <button onclick="document.getElementById('promo-banner').style.display='none'" class="text-black hover:text-white p-1 text-base" aria-label="Cerrar banner">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 bg-darkBg/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-gold-600 to-gold-400 flex items-center justify-center text-black font-black text-xl shadow-lg shadow-gold-500/10">
+                        <i class="fa-solid fa-film"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-base sm:text-lg font-extrabold text-white tracking-wider font-serif">REEL ESTATE <span class="text-gold-400">VIEW</span></span>
+                        <span class="text-[9px] tracking-widest text-slate-400 uppercase font-semibold">HURGHADA • VIDEO PRODUCTION</span>
+                    </div>
+                </a>
+
+                <!-- Navigation -->
+                <nav class="hidden md:flex items-center gap-7 text-xs uppercase tracking-widest font-semibold text-slate-300">
+                    <a href="#inicio" class="hover:text-gold-400 transition-colors">Inicio</a>
+                    <a href="#servicios" class="hover:text-gold-400 transition-colors">Planes y Precios</a>
+                    <a href="#como-funciona" class="hover:text-gold-400 transition-colors">Cómo Funciona</a>
+                    <a href="#calculadora" class="hover:text-gold-400 transition-colors">Cotizador</a>
+                    <a href="#fidelización" class="hover:text-gold-400 transition-colors">Programa Descuentos</a>
+                    <a href="#contacto" class="hover:text-gold-400 transition-colors">Contacto</a>
+                </nav>
+
+                <!-- CTA -->
+                <div class="flex items-center gap-3">
+                    <a href="#calculadora" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider gold-btn shadow-lg transition-transform active:scale-95">
+                        <i class="fa-solid fa-bolt"></i>
+                        <span>Pedir Video</span>
+                    </a>
+                    <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white p-2 text-2xl" aria-label="Abrir Menú">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cardBg border-b border-slate-800 px-4 py-4 space-y-3">
+            <a href="#inicio" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-gold-400 py-2 border-b border-slate-800">Inicio</a>
+            <a href="#servicios" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-gold-400 py-2 border-b border-slate-800">Planes y Precios</a>
+            <a href="#como-funciona" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-gold-400 py-2 border-b border-slate-800">Cómo Funciona</a>
+            <a href="#calculadora" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-gold-400 py-2 border-b border-slate-800">Cotizador</a>
+            <a href="#fidelización" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-gold-400 py-2 border-b border-slate-800">Programa Descuentos</a>
+            <a href="#contacto" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-gold-400 py-2">Contacto</a>
+            <a href="#calculadora" onclick="toggleMobileMenu()" class="w-full text-center block py-3 rounded-xl font-bold gold-btn mt-2">Pedir Mi Video</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative pt-16 pb-24 hero-glow overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-cardBg border border-gold-500/30 rounded-full text-gold-400 text-xs font-semibold uppercase tracking-widest mb-6">
+                    <i class="fa-solid fa-clapperboard text-gold-400"></i>
+                    Transforma tus Fotos en Ventas Reales
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-serif leading-tight mb-6 text-white">
+                    Convertimos las fotos de tus propiedades en <span class="gold-gradient-text">Reels y Videos Promocionales</span>
+                </h1>
+                <p class="text-slate-400 text-base sm:text-lg leading-relaxed mb-8 font-light">
+                    Envíanos las fotos o clips de tus casas o departamentos en alquiler o venta en Hurghada. Te creamos un video profesional optimizado para redes sociales con tomas de drone simuladas, voz en off y música envolvente.
+                </p>
+
+                <!-- Value Badges -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto mb-10 text-left">
+                    <div class="bg-cardBg p-3.5 rounded-xl card-border flex items-center gap-3">
+                        <i class="fa-solid fa-bolt text-gold-400 text-xl"></i>
+                        <div>
+                            <span class="block text-xs font-bold text-white">Entrega Express</span>
+                            <span class="text-[10px] text-slate-400">24 a 48 Horas</span>
+                        </div>
+                    </div>
+                    <div class="bg-cardBg p-3.5 rounded-xl card-border flex items-center gap-3">
+                        <i class="fa-solid fa-rotate-left text-gold-400 text-xl"></i>
+                        <div>
+                            <span class="block text-xs font-bold text-white">Garantía 100%</span>
+                            <span class="text-[10px] text-slate-400">Reembolso Si No Te Gusta</span>
+                        </div>
+                    </div>
+                    <div class="bg-cardBg p-3.5 rounded-xl card-border flex items-center gap-3">
+                        <i class="fa-solid fa-mobile-screen-button text-gold-400 text-xl"></i>
+                        <div>
+                            <span class="block text-xs font-bold text-white">Vodafone Cash</span>
+                            <span class="text-[10px] text-slate-400">50% Adelanto / 50% Final</span>
+                        </div>
+                    </div>
+                    <div class="bg-cardBg p-3.5 rounded-xl card-border flex items-center gap-3">
+                        <i class="fa-solid fa-tag text-gold-400 text-xl"></i>
+                        <div>
+                            <span class="block text-xs font-bold text-white">Desde $10 USD</span>
+                            <span class="text-[10px] text-slate-400">Precios Transparentes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#calculadora" class="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold uppercase tracking-wider gold-btn shadow-xl text-center">
+                        <i class="fa-solid fa-calculator mr-2"></i> Calcular mi Pedido Ahora
+                    </a>
+                    <a href="#demo-video" class="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold uppercase tracking-wider bg-cardBg hover:bg-cardHover text-white card-border text-center transition-colors">
+                        <i class="fa-solid fa-film mr-2 text-gold-400"></i> Ver Formatos de Video
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formatos de video -->
+    <section id="demo-video" class="py-20 bg-cardBg/50 border-y border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-gold-400 font-semibold text-xs tracking-widest uppercase">Nuestros Formatos</span>
+                <h2 class="text-3xl font-serif font-bold text-white mt-2">Formatos Diseñados para Vender</h2>
+                <p class="text-slate-400 text-sm mt-2">Inmuebles en venta o alquiler presentados con dinamismo y ritmo. Las fotos de esta sección son de referencia.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Demo Card 1: Reel Vertical -->
+                <div class="bg-cardBg rounded-2xl overflow-hidden card-border group hover:border-gold-500/50 transition-all">
+                    <div class="relative h-96 bg-black flex items-center justify-center overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80" alt="Villa Hurghada" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40"></div>
+
+
+                        <span class="absolute top-4 left-4 bg-red-600 text-white text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full">
+                            <i class="fa-solid fa-fire mr-1"></i> Formato Reel 9:16
+                        </span>
+                        <div class="absolute bottom-4 left-4 right-4 text-left">
+                            <span class="text-gold-400 text-xs font-bold">Para redes sociales</span>
+                            <h3 class="text-white font-bold text-base">Reel vertical con movimiento de dron</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 text-xs text-slate-400 flex justify-between items-center border-t border-slate-800">
+                        <span><i class="fa-solid fa-eye text-gold-400 mr-1"></i> Instagram y TikTok</span>
+                        <span class="text-white font-semibold">Plan Básico / Medio</span>
+                    </div>
+                </div>
+
+                <!-- Demo Card 2: Showcase Horizontal -->
+                <div class="bg-cardBg rounded-2xl overflow-hidden card-border group hover:border-gold-500/50 transition-all">
+                    <div class="relative h-96 bg-black flex items-center justify-center overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80" alt="Departamento Alquiler" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40"></div>
+
+                        <span class="absolute top-4 left-4 bg-blue-600 text-white text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full">
+                            <i class="fa-solid fa-microphone mr-1"></i> Voz en Off Incluida
+                        </span>
+                        <div class="absolute bottom-4 left-4 right-4 text-left">
+                            <span class="text-gold-400 text-xs font-bold">Para anuncios y portales</span>
+                            <h3 class="text-white font-bold text-base">Video tour con voz que explica la propiedad</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 text-xs text-slate-400 flex justify-between items-center border-t border-slate-800">
+                        <span><i class="fa-solid fa-volume-high text-gold-400 mr-1"></i> Voz en off incluida</span>
+                        <span class="text-white font-semibold">Plan Medio / Premium</span>
+                    </div>
+                </div>
+
+                <!-- Demo Card 3: VIP Luxe Pack -->
+                <div class="bg-cardBg rounded-2xl overflow-hidden card-border group hover:border-gold-500/50 transition-all">
+                    <div class="relative h-96 bg-black flex items-center justify-center overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Residencia de Lujo" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40"></div>
+
+                        <span class="absolute top-4 left-4 bg-gold-500 text-black text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full">
+                            <i class="fa-solid fa-crown mr-1"></i> Paquete VIP Luxe
+                        </span>
+                        <div class="absolute bottom-4 left-4 right-4 text-left">
+                            <span class="text-gold-400 text-xs font-bold">Para propiedades premium</span>
+                            <h3 class="text-white font-bold text-base">1 Video Largo + 3 Reels + Multi-idioma</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 text-xs text-slate-400 flex justify-between items-center border-t border-slate-800">
+                        <span><i class="fa-solid fa-globe text-gold-400 mr-1"></i> Español / Inglés / Árabe</span>
+                        <span class="text-white font-semibold">Plan Premium VIP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Plans Section -->
+    <section id="servicios" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-gold-400 font-semibold text-xs tracking-widest uppercase">Transparencia Total</span>
+            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mt-2">Nuestros Paquetes y Precios</h2>
+            <p class="text-slate-400 text-sm mt-3">Precios accesibles con la más alta calidad visual. Sin costos ocultos.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-8">
+            <!-- Plan Básico -->
+            <div class="bg-cardBg rounded-3xl p-8 card-border flex flex-col justify-between relative hover:border-slate-600 transition-all">
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-xs uppercase font-extrabold tracking-wider text-slate-400">Plan Básico</span>
+                        <span class="bg-slate-800 text-slate-300 text-[10px] px-3 py-1 rounded-full font-bold">Entrega 24h</span>
+                    </div>
+                    <div class="mb-6">
+                        <span class="text-4xl font-extrabold font-serif text-white">$10 - $15</span>
+                        <span class="text-slate-400 text-xs ml-1">USD / por video</span>
+                    </div>
+                    <p class="text-slate-400 text-xs leading-relaxed mb-6 pb-6 border-b border-slate-800">
+                        Ideal para publicar rápidamente en redes sociales y llamar la atención con movimiento dinámico.
+                    </p>
+
+                    <ul class="space-y-3.5 text-xs text-slate-300 mb-8">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400"></i> 1 Video Promocional Optimizado (Reel/Short)</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400"></i> Efecto de tomas de Drone (Perspectiva 3D/AI)</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400"></i> Texto explicativo con datos del inmueble</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400"></i> Música de tendencia sin derechos</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400"></i> Entrega super rápida en <strong>24 horas</strong></li>
+                    </ul>
+                </div>
+
+                <button onclick="selectPackage('Básico', 15)" class="w-full py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-slate-800 hover:bg-slate-700 text-white transition-colors">
+                    Seleccionar Plan Básico
+                </button>
+            </div>
+
+            <!-- Plan Medio (Recomendado) -->
+            <div class="bg-cardBg rounded-3xl p-8 card-border-gold shadow-2xl relative flex flex-col justify-between transform lg:-translate-y-2">
+                <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-gold-600 to-gold-400 text-black text-[10px] uppercase font-extrabold tracking-widest px-4 py-1 rounded-full shadow-lg">
+                    Más Vendido / Recomendado
+                </div>
+
+                <div>
+                    <div class="flex justify-between items-center mb-4 mt-2">
+                        <span class="text-xs uppercase font-extrabold tracking-wider text-gold-400">Plan Medio</span>
+                        <span class="bg-gold-500/10 text-gold-400 text-[10px] px-3 py-1 rounded-full font-bold">Entrega 24-48h</span>
+                    </div>
+                    <div class="mb-6">
+                        <span class="text-4xl font-extrabold font-serif text-white">$20 - $30</span>
+                        <span class="text-slate-400 text-xs ml-1">USD / por paquete</span>
+                    </div>
+                    <p class="text-slate-400 text-xs leading-relaxed mb-6 pb-6 border-b border-slate-800">
+                        Cobertura completa con video horizontal para web/Facebook y vertical para Instagram/TikTok.
+                    </p>
+
+                    <ul class="space-y-3.5 text-xs text-slate-300 mb-8">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400"></i> <strong>1 Video Largo Showcase + 1 Reel Corto</strong></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400"></i> Locución / Voz en off profesional explicativa</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400"></i> Transiciones dinámicas y corrección de color</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400"></i> Edición de sonido avanzada</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400"></i> Entrega en 24 a 48 horas máximo</li>
+                    </ul>
+                </div>
+
+                <button onclick="selectPackage('Medio', 30)" class="w-full py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider gold-btn shadow-lg">
+                    Seleccionar Plan Medio
+                </button>
+            </div>
+
+            <!-- Plan Premium VIP -->
+            <div class="bg-cardBg rounded-3xl p-8 card-border flex flex-col justify-between relative hover:border-slate-600 transition-all">
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-xs uppercase font-extrabold tracking-wider text-purple-400">Plan Premium VIP</span>
+                        <span class="bg-purple-950/60 text-purple-300 text-[10px] px-3 py-1 rounded-full font-bold">Prioridad VIP</span>
+                    </div>
+                    <div class="mb-6">
+                        <span class="text-4xl font-extrabold font-serif text-white">$50 - $70</span>
+                        <span class="text-slate-400 text-xs ml-1">USD / pack completo</span>
+                    </div>
+                    <p class="text-slate-400 text-xs leading-relaxed mb-6 pb-6 border-b border-slate-800">
+                        Para propiedades exclusivas y de lujo que requieren máxima exposición y elegancia.
+                    </p>
+
+                    <ul class="space-y-3.5 text-xs text-slate-300 mb-8">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400"></i> <strong>1 Video Largo 4K + 3 Reels Verticals Cortos</strong></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400"></i> Voz en off en <strong>2 Idiomas</strong> (Español, Inglés o Árabe)</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400"></i> Animación de tu Logo e Identidad de Marca</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400"></i> Revisiones ilimitadas hasta tu total conformidad</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gold-400"></i> Entrega prioritaria en 24 horas</li>
+                    </ul>
+                </div>
+
+                <button onclick="selectPackage('Premium VIP', 60)" class="w-full py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-slate-800 hover:bg-slate-700 text-white transition-colors">
+                    Seleccionar Plan VIP
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works & Guarantee Section -->
+    <section id="como-funciona" class="py-20 bg-cardBg/30 border-y border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-gold-400 font-semibold text-xs tracking-widest uppercase">Proceso Sencillo</span>
+                <h2 class="text-3xl font-serif font-bold text-white mt-2">¿Cómo Trabajamos Juntos?</h2>
+                <p class="text-slate-400 text-sm mt-2">Sin trámites complicados. Tu video listo para publicar en 4 simples pasos.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <!-- Step 1 -->
+                <div class="bg-cardBg p-6 rounded-2xl card-border relative">
+                    <span class="w-10 h-10 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center font-bold text-lg mb-4">1</span>
+                    <h3 class="text-white font-bold text-base mb-2">Envía tus Fotos</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Nos mandas las fotos o videos sencillos de la propiedad por <a href="https://wa.me/201500563793" target="_blank" rel="noopener" class="text-gold-400 underline">WhatsApp</a> o por correo.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-cardBg p-6 rounded-2xl card-border relative">
+                    <span class="w-10 h-10 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center font-bold text-lg mb-4">2</span>
+                    <h3 class="text-white font-bold text-base mb-2">50% Adelanto</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Realizas la primera mitad del pago por <strong>Vodafone Cash</strong> para dar inicio al proyecto de edición.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-cardBg p-6 rounded-2xl card-border relative">
+                    <span class="w-10 h-10 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center font-bold text-lg mb-4">3</span>
+                    <h3 class="text-white font-bold text-base mb-2">Revisión del Borrador</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        En 24-48 horas te enviamos una muestra con marca de agua para que evalúes y solicites ajustes.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-cardBg p-6 rounded-2xl card-border relative">
+                    <span class="w-10 h-10 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center font-bold text-lg mb-4">4</span>
+                    <h3 class="text-white font-bold text-base mb-2">Entrega Final</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Pagas la segunda mitad (50%) restante y recibes tus videos en máxima resolución sin marcas.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Guarantee & Payment Box -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-gradient-to-br from-cardBg via-black to-cardBg p-8 rounded-3xl card-border-gold">
+                <!-- Vodafone Cash Box -->
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-vodafone/20 text-vodafone flex items-center justify-center text-2xl shrink-0 font-bold border border-vodafone/40">
+                        <i class="fa-solid fa-wallet"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold text-lg flex items-center gap-2">
+                            Método Exclusivo Vodafone Cash
+                            <span class="bg-vodafone/20 text-vodafone text-[10px] px-2 py-0.5 rounded font-bold uppercase">Seguro</span>
+                        </h4>
+                        <p class="text-slate-400 text-xs leading-relaxed mt-2">
+                            Aceptamos pagos únicamente mediante <strong>Vodafone Cash</strong>. Pago dividido transparente: <strong>50% por adelantado</strong> para iniciar y el <strong>50% restante al aprobar</strong> el video.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Reembolso Box -->
+                <div class="flex items-start gap-4 border-t md:border-t-0 md:border-l border-slate-800 pt-6 md:pt-0 md:pl-8">
+                    <div class="w-12 h-12 rounded-2xl bg-gold-500/20 text-gold-400 flex items-center justify-center text-2xl shrink-0 font-bold border border-gold-500/40">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold text-lg">Garantía de Satisfacción 100%</h4>
+                        <p class="text-slate-400 text-xs leading-relaxed mt-2">
+                            Trabajamos con total transparencia. Si el borrador final no cumple con tus expectativas y no queda a tu gusto, te realizamos el <strong>reembolso del 100% de tu dinero</strong> sin preguntas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Calculator / Order Section -->
+    <section id="calculadora" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-cardBg rounded-3xl card-border overflow-hidden shadow-2xl">
+            <div class="grid grid-cols-1 lg:grid-cols-12">
+                <!-- Form / Controls -->
+                <div class="p-8 sm:p-10 lg:col-span-7">
+                    <span class="text-gold-400 font-semibold text-xs tracking-widest uppercase">Sin sorpresas</span>
+                    <h2 class="text-3xl font-serif font-bold text-white mt-1 mb-2">Cotizador de Pedido Instantáneo</h2>
+                    <p class="text-slate-400 text-xs mb-8">Personaliza las opciones de tu video para conocer el costo exacto y el adelanto del 50% por Vodafone Cash.</p>
+
+                    <div class="space-y-6">
+                        <!-- Select Plan -->
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-300 mb-2">1. Selecciona tu Paquete</label>
+                            <div class="grid grid-cols-3 gap-3">
+                                <button type="button" onclick="setCalcPlan('Básico', 15)" id="btn-plan-basico" class="py-3 px-3 rounded-xl card-border text-center text-xs font-bold transition-all bg-gold-500 text-black border-gold-400">
+                                    Básico ($15)
+                                </button>
+                                <button type="button" onclick="setCalcPlan('Medio', 30)" id="btn-plan-medio" class="py-3 px-3 rounded-xl card-border text-center text-xs font-bold transition-all text-slate-300 hover:bg-slate-800">
+                                    Medio ($30)
+                                </button>
+                                <button type="button" onclick="setCalcPlan('Premium VIP', 60)" id="btn-plan-vip" class="py-3 px-3 rounded-xl card-border text-center text-xs font-bold transition-all text-slate-300 hover:bg-slate-800">
+                                    VIP ($60)
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Quantity of Videos -->
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <label class="text-xs font-bold uppercase text-slate-300">2. Cantidad de Inmuebles / Videos</label>
+                                <span id="qty-display" class="text-gold-400 font-bold text-sm">1 Inmueble</span>
+                            </div>
+                            <input type="range" id="input-qty" min="1" max="10" step="1" value="1" oninput="updateCalculator()" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-gold-500">
+                        </div>
+
+                        <!-- Voiceover Option -->
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-300 mb-2">3. Idioma de la Voz en Off (Si Aplica)</label>
+                            <select id="select-language" onchange="updateCalculator()" class="w-full bg-black/50 card-border rounded-xl px-4 py-3 text-xs font-medium text-slate-200 focus:outline-none focus:border-gold-500">
+                                <option value="es">Español Latino / España</option>
+                                <option value="en">Inglés Internacional</option>
+                                <option value="ar">Árabe (Egipto / Hurghada)</option>
+                            </select>
+                        </div>
+
+                        <!-- Discount Code -->
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-300 mb-2">4. Código de Descuento (Opcional)</label>
+                            <div class="flex gap-2">
+                                <input type="text" id="input-promo" placeholder="Ej. WELCOME15" class="w-full bg-black/50 card-border rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-gold-500 uppercase">
+                                <button type="button" onclick="applyPromoCode()" class="px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs rounded-xl transition-colors shrink-0">
+                                    Aplicar
+                                </button>
+                            </div>
+                            <span id="promo-message" class="text-[11px] mt-1.5 block font-medium"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Price Summary & Direct Order -->
+                <div class="bg-black/60 p-8 sm:p-10 lg:col-span-5 flex flex-col justify-between border-t lg:border-t-0 lg:border-l border-slate-800">
+                    <div>
+                        <h3 class="text-base font-bold text-white border-b border-slate-800 pb-4 mb-6 flex items-center justify-between">
+                            <span>Resumen de Inversión</span>
+                            <span class="text-xs font-normal text-slate-400">USD $</span>
+                        </h3>
+
+                        <div class="space-y-4 text-xs">
+                            <div class="flex justify-between text-slate-400">
+                                <span>Paquete seleccionado:</span>
+                                <span id="summary-plan" class="font-bold text-white">Básico ($15)</span>
+                            </div>
+                            <div class="flex justify-between text-slate-400">
+                                <span>Subtotal (<span id="summary-qty">1</span> video/s):</span>
+                                <span id="summary-subtotal" class="font-bold text-white">$15.00 USD</span>
+                            </div>
+                            <div class="flex justify-between text-slate-400">
+                                <span>Descuento aplicado:</span>
+                                <span id="summary-discount" class="font-bold text-emerald-400">-$0.00 USD</span>
+                            </div>
+                            <div class="pt-4 border-t border-slate-800 flex justify-between items-end">
+                                <div>
+                                    <span class="text-slate-300 font-bold block">TOTAL A PAGAR:</span>
+                                    <span class="text-[10px] text-slate-500">Impuestos e IVA incluidos</span>
+                                </div>
+                                <span id="summary-total" class="text-3xl font-extrabold font-serif text-gold-400">$15.00 USD</span>
+                            </div>
+                        </div>
+
+                        <!-- Deposit Box -->
+                        <div class="mt-8 bg-vodafone/10 border border-vodafone/30 rounded-2xl p-4">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-xs font-bold text-white flex items-center gap-1.5">
+                                    <i class="fa-solid fa-mobile-screen text-vodafone"></i>
+                                    Adelanto 50% (Vodafone Cash):
+                                </span>
+                                <span id="summary-deposit" class="text-lg font-bold text-vodafone">$7.50 USD</span>
+                            </div>
+                            <p class="text-[10px] text-slate-400 leading-tight">
+                                Solo pagas la mitad para comenzar a editar. El resto ($<span id="summary-balance">7.50</span>) al entregar el borrador final.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Direct Contact CTAs -->
+                    <div class="mt-8 space-y-3">
+                        <button onclick="sendOrderWhatsApp()" class="w-full py-4 rounded-xl font-bold text-xs uppercase tracking-wider bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center gap-2 shadow-lg">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>Pedir por WhatsApp</span>
+                        </button>
+                        <button onclick="sendOrderEmail()" class="w-full py-4 rounded-xl font-bold text-xs uppercase tracking-wider gold-btn flex items-center justify-center gap-2 shadow-lg">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>Pedir por Correo (abre tu app de correo)</span>
+                        </button>
+                        <p class="text-[10px] text-center text-slate-500">
+                            WhatsApp: <code class="text-slate-400 font-mono">+20 150 056 3793</code>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Referral & Loyalty Program -->
+    <section id="fidelización" class="py-20 bg-cardBg/40 border-y border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-cardBg via-slate-900 to-cardBg rounded-3xl p-8 sm:p-12 card-border flex flex-col lg:flex-row items-center justify-between gap-8">
+                <div class="max-w-2xl">
+                    <span class="bg-gold-500/10 text-gold-400 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full border border-gold-500/20">
+                        <i class="fa-solid fa-gift mr-1"></i> Programa de Afiliados
+                    </span>
+                    <h2 class="text-3xl font-serif font-bold text-white mt-4 mb-3">Recomienda y Gana Videos Gratis</h2>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        ¿Conoces a otros agentes inmobiliarios o propietarios en Hurghada? Por cada cliente que contrate un servicio por tu recomendación:
+                    </p>
+                    <ul class="mt-4 space-y-2 text-xs text-slate-300">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold-400"></i> Tu referido obtiene <strong>10% de descuento</strong> en su primer pedido.</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-gold-400"></i> Tú recibes <strong>1 Video Promo GRATIS</strong> o <strong>15% de descuento acumulable</strong> en tu próximo proyecto.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-black/50 p-6 rounded-2xl card-border w-full lg:w-auto min-w-[280px] text-center">
+                    <i class="fa-solid fa-handshake-simple text-4xl text-gold-400 mb-3"></i>
+                    <h4 class="text-white font-bold text-sm mb-1">¿Quieres unirte como Aliado?</h4>
+                    <p class="text-slate-400 text-xs mb-4">Escríbenos para enviarte tu código personalizado.</p>
+                    <a href="mailto:giorgemorales.mg@gmail.com?subject=Programa%20de%20Referidos%20Reel%20Estate" class="block py-3 px-6 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs uppercase transition-colors">
+                        Solicitar mi Código
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Details -->
+    <section id="contacto" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <!-- Left Contact Info -->
+            <div class="lg:col-span-5 flex flex-col justify-between">
+                <div>
+                    <span class="text-gold-400 font-semibold text-xs tracking-widest uppercase">Atención Inmediata</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mt-2 mb-6">Inicia tu Proyecto Hoy</h2>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-8">
+                        Estamos listos para transformar la imagen de tus propiedades. Mándanos un mensaje con tus dudas o archivos de muestra.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xs uppercase text-slate-400">Correo Principal</h4>
+                                <a href="mailto:giorgemorales.mg@gmail.com" class="text-white font-bold text-sm hover:text-gold-400 transition-colors">giorgemorales.mg@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xs uppercase text-slate-400">WhatsApp</h4>
+                                <a href="https://wa.me/201500563793" target="_blank" rel="noopener" class="text-white font-bold text-sm hover:text-gold-400 transition-colors">+20 150 056 3793</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-vodafone/10 text-vodafone flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-mobile-screen"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xs uppercase text-slate-400">Pago Móvil Directo</h4>
+                                <p class="text-white font-bold text-sm">Vodafone Cash Egipto</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-gold-500/10 text-gold-400 flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xs uppercase text-slate-400">Ubicación Cobertura</h4>
+                                <p class="text-white font-bold text-sm">Hurghada, El Gouna, Sahl Hasheesh & Alrededores</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guarantee Badge -->
+                <div class="mt-8 p-4 bg-cardBg rounded-2xl card-border flex items-center gap-3">
+                    <i class="fa-solid fa-shield-cat text-2xl text-gold-400"></i>
+                    <p class="text-[11px] text-slate-400 leading-snug">
+                        Recuerda: Tu dinero está seguro. Si el trabajo no te gusta, se aplica reembolso íntegro inmediato.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <div class="lg:col-span-7 bg-cardBg p-8 sm:p-10 rounded-3xl card-border shadow-2xl">
+                <form id="contact-form" onsubmit="handleFormSubmit(event)">
+                    <h3 class="text-xl font-bold font-serif text-white mb-6">Formulario de Pedido Directo</h3>
+
+                    <div id="form-alert" class="hidden mb-6 p-4 rounded-xl text-xs font-semibold"></div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-400 mb-2">Tu Nombre *</label>
+                            <input type="text" name="nombre" id="f-nombre" required placeholder="Ej. Ahmed / Carlos" class="w-full bg-black/50 card-border rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-gold-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-400 mb-2">Correo Electrónico *</label>
+                            <input type="email" name="email" id="f-email" required placeholder="ejemplo@correo.com" class="w-full bg-black/50 card-border rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-gold-500">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-400 mb-2">Número Vodafone Cash / Teléfono</label>
+                            <input type="tel" name="telefono" id="f-tel" placeholder="+20 10..." class="w-full bg-black/50 card-border rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-gold-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-400 mb-2">Tipo de Inmueble</label>
+                            <select name="tipo_inmueble" id="f-tipo" class="w-full bg-black/50 card-border rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-gold-500">
+                                <option>Casa / Villa en Venta</option>
+                                <option>Departamento / Flat en Alquiler</option>
+                                <option>Penthouse / Propiedad Luxe</option>
+                                <option>Terreno / Proyecto Comercial</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="block text-xs font-bold uppercase text-slate-400 mb-2">Detalles del Inmueble y Enlace a tus Fotos (Drive / Dropbox / WeTransfer)</label>
+                        <textarea rows="4" name="detalles" id="f-detalles" placeholder="Pega aquí los enlaces a tus fotos o describe la propiedad (ubicación, precio, características clave que quieras destacar)..." class="w-full bg-black/50 card-border rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-gold-500 resize-none"></textarea>
+                    </div>
+
+                    <input type="text" name="_honey" id="f-honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0" aria-hidden="true">
+                    <button type="submit" id="form-submit-btn" class="w-full py-4 rounded-xl font-bold text-xs uppercase tracking-wider gold-btn flex items-center justify-center gap-2 shadow-xl">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Enviar Solicitud</span>
+                    </button>
+                    <button type="button" onclick="sendFormViaWhatsApp()" class="mt-3 w-full py-4 rounded-xl font-bold text-xs uppercase tracking-wider bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center gap-2 shadow-xl">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                        <span>O enviar este pedido por WhatsApp</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-slate-500 py-12 border-t border-slate-900 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-gold-500 text-black flex items-center justify-center font-bold text-sm">
+                    <i class="fa-solid fa-film"></i>
+                </div>
+                <div>
+                    <span class="text-white font-bold block">REEL ESTATE VIEW HURGHADA</span>
+                    <span class="text-[10px] text-slate-500">Servicios Audiovisuales Inmobiliarios</span>
+                </div>
+            </div>
+
+            <p class="text-center sm:text-right">
+                © 2026 REEL ESTATE VIEW HURGHADA. Todos los derechos reservados.<br>
+                Contacto Directo: <a href="mailto:giorgemorales.mg@gmail.com" class="text-gold-400 hover:underline">giorgemorales.mg@gmail.com</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Calculator State
+        let currentPlanName = 'Básico';
+        let currentPlanPrice = 15;
+        let activeDiscountPercent = 0;
+
+        function setCalcPlan(planName, price) {
+            currentPlanName = planName;
+            currentPlanPrice = price;
+
+            // Toggle button styles
+            const btnBasico = document.getElementById('btn-plan-basico');
+            const btnMedio = document.getElementById('btn-plan-medio');
+            const btnVip = document.getElementById('btn-plan-vip');
+
+            btnBasico.className = "py-3 px-3 rounded-xl card-border text-center text-xs font-bold transition-all text-slate-300 hover:bg-slate-800";
+            btnMedio.className = "py-3 px-3 rounded-xl card-border text-center text-xs font-bold transition-all text-slate-300 hover:bg-slate-800";
+            btnVip.className = "py-3 px-3 rounded-xl card-border text-center text-xs font-bold transition-all text-slate-300 hover:bg-slate-800";
+
+            if (planName === 'Básico') {
+                btnBasico.className = "py-3 px-3 rounded-xl card-border text-center text-xs font-bold transition-all bg-gold-500 text-black border-gold-400";
+            } else if (planName === 'Medio') {
+                btnMedio.className = "py-3 px-3 rounded-xl card-border text-center text-xs font-bold transition-all bg-gold-500 text-black border-gold-400";
+            } else {
+                btnVip.className = "py-3 px-3 rounded-xl card-border text-center text-xs font-bold transition-all bg-gold-500 text-black border-gold-400";
+            }
+
+            updateCalculator();
+        }
+
+        function selectPackage(planName, price) {
+            setCalcPlan(planName, price);
+            const calcElement = document.getElementById('calculadora');
+            calcElement.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function updateCalculator() {
+            const qty = parseInt(document.getElementById('input-qty').value);
+            document.getElementById('qty-display').innerText = qty + (qty === 1 ? " Inmueble" : " Inmuebles");
+
+            const subtotal = currentPlanPrice * qty;
+            const discountAmount = subtotal * (activeDiscountPercent / 100);
+            const total = subtotal - discountAmount;
+            const deposit = total * 0.50;
+            const balance = total - deposit;
+
+            // DOM Updates
+            document.getElementById('summary-plan').innerText = `${currentPlanName} ($${currentPlanPrice})`;
+            document.getElementById('summary-qty').innerText = qty;
+            document.getElementById('summary-subtotal').innerText = `$${subtotal.toFixed(2)} USD`;
+            document.getElementById('summary-discount').innerText = `-$${discountAmount.toFixed(2)} USD`;
+            document.getElementById('summary-total').innerText = `$${total.toFixed(2)} USD`;
+            document.getElementById('summary-deposit').innerText = `$${deposit.toFixed(2)} USD`;
+            document.getElementById('summary-balance').innerText = balance.toFixed(2);
+        }
+
+        function applyPromoCode() {
+            const codeInput = document.getElementById('input-promo').value.trim().toUpperCase();
+            const msg = document.getElementById('promo-message');
+
+            if (codeInput === 'WELCOME15' || codeInput === 'FIRST15') {
+                activeDiscountPercent = 15;
+                msg.className = "text-[11px] mt-1.5 block font-medium text-emerald-400";
+                msg.innerText = "¡Código válido! Se aplicó un 15% de descuento por primera compra.";
+            } else if (codeInput === 'REFERRAL10') {
+                activeDiscountPercent = 10;
+                msg.className = "text-[11px] mt-1.5 block font-medium text-emerald-400";
+                msg.innerText = "¡Código de referido válido! 10% de descuento aplicado.";
+            } else if (codeInput === '') {
+                activeDiscountPercent = 0;
+                msg.innerText = "";
+            } else {
+                activeDiscountPercent = 0;
+                msg.className = "text-[11px] mt-1.5 block font-medium text-rose-400";
+                msg.innerText = "Código no reconocido. Prueba con WELCOME15";
+            }
+
+            updateCalculator();
+        }
+
+        function applyDiscountDirectly() {
+            document.getElementById('input-promo').value = 'WELCOME15';
+            applyPromoCode();
+            document.getElementById('calculadora').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function sendOrderEmail() {
+            const qty = document.getElementById('input-qty').value;
+            const lang = document.getElementById('select-language').value;
+            const total = document.getElementById('summary-total').innerText;
+            const deposit = document.getElementById('summary-deposit').innerText;
+
+            const subject = encodeURIComponent(`Nuevo Pedido de Video - Plan ${currentPlanName}`);
+            const body = encodeURIComponent(
+                `Hola REEL ESTATE VIEW HURGHADA,\n\nDeseo realizar un pedido con los siguientes detalles:\n\n` +
+                `- Paquete: ${currentPlanName}\n` +
+                `- Cantidad de Inmuebles: ${qty}\n` +
+                `- Idioma Preferido: ${lang}\n` +
+                `- Total Estimado: ${total}\n` +
+                `- Adelanto por Vodafone Cash (50%): ${deposit}\n\n` +
+                `Quedo a la espera de sus instrucciones para la transferencia por Vodafone Cash y el envío de fotos.\n\nGracias.`
+            );
+
+            window.location.href = `mailto:giorgemorales.mg@gmail.com?subject=${subject}&body=${body}`;
+        }
+
+        // ===== Contacto real =====
+        const WHATSAPP_NUMBER = '201500563793';           // +20 1500563793 (Egipto)
+        const FORM_ENDPOINT = 'https://formsubmit.co/ajax/giorgemorales.mg@gmail.com';
+
+        function openWhatsApp(text) {
+            window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(text), '_blank', 'noopener');
+        }
+
+        function sendOrderWhatsApp() {
+            const qty = document.getElementById('input-qty').value;
+            const lang = document.getElementById('select-language').value;
+            const total = document.getElementById('summary-total').innerText;
+            const deposit = document.getElementById('summary-deposit').innerText;
+            openWhatsApp(
+                'Hola REEL ESTATE VIEW HURGHADA, quiero hacer un pedido:\n\n' +
+                '- Paquete: ' + currentPlanName + '\n' +
+                '- Inmuebles: ' + qty + '\n' +
+                '- Idioma: ' + lang + '\n' +
+                '- Total estimado: ' + total + '\n' +
+                '- Adelanto 50% (Vodafone Cash): ' + deposit + '\n\n' +
+                'Espero sus instrucciones para el pago y el envío de fotos.'
+            );
+        }
+
+        function formSummaryText() {
+            const v = id => document.getElementById(id).value.trim();
+            return 'Hola REEL ESTATE VIEW HURGHADA, quiero pedir un video:\n\n' +
+                '- Nombre: ' + v('f-nombre') + '\n' +
+                '- Tipo de inmueble: ' + v('f-tipo') + '\n' +
+                '- Paquete: ' + currentPlanName + ' (' + document.getElementById('summary-total').innerText + ')\n' +
+                '- Detalles / enlace a fotos: ' + v('f-detalles');
+        }
+
+        function sendFormViaWhatsApp() {
+            if (!document.getElementById('f-nombre').value.trim()) {
+                document.getElementById('f-nombre').focus();
+                return;
+            }
+            openWhatsApp(formSummaryText());
+        }
+
+        async function handleFormSubmit(e) {
+            e.preventDefault();
+            const alertBox = document.getElementById('form-alert');
+            const btn = document.getElementById('form-submit-btn');
+            const v = id => document.getElementById(id).value.trim();
+            if (v('f-honey')) return; // anti-spam
+
+            btn.disabled = true;
+            btn.classList.add('opacity-60');
+            alertBox.className = 'mb-6 p-4 rounded-xl text-xs font-semibold bg-slate-800 text-slate-200 block';
+            alertBox.innerText = 'Enviando tu solicitud...';
+
+            const waLink = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(formSummaryText());
+            try {
+                const res = await fetch(FORM_ENDPOINT, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify({
+                        _subject: 'Nuevo pedido web - ' + v('f-nombre') + ' - Plan ' + currentPlanName,
+                        _template: 'table',
+                        _captcha: 'false',
+                        Nombre: v('f-nombre'),
+                        Correo: v('f-email'),
+                        Telefono: v('f-tel'),
+                        Tipo_de_inmueble: v('f-tipo'),
+                        Paquete_calculadora: currentPlanName + ' - Total ' + document.getElementById('summary-total').innerText,
+                        Detalles: v('f-detalles')
+                    })
+                });
+                const data = await res.json();
+                if (!res.ok || String(data.success) !== 'true') throw new Error('send failed');
+
+                alertBox.className = 'mb-6 p-4 rounded-xl text-xs font-semibold bg-emerald-950/80 text-emerald-300 border border-emerald-800/80 block';
+                alertBox.innerHTML = "<i class='fa-solid fa-circle-check mr-2'></i>Solicitud enviada. Te responderemos al correo que indicaste con los datos de Vodafone Cash. Para ir más rápido, <a class='underline text-white' target='_blank' rel='noopener' href='" + waLink + "'>escríbenos también por WhatsApp</a>.";
+                e.target.reset();
+            } catch (err) {
+                alertBox.className = 'mb-6 p-4 rounded-xl text-xs font-semibold bg-rose-950/80 text-rose-300 border border-rose-800/80 block';
+                alertBox.innerHTML = "<i class='fa-solid fa-triangle-exclamation mr-2'></i>No se pudo enviar por correo. No pierdas tu pedido: <a class='underline text-white' target='_blank' rel='noopener' href='" + waLink + "'>envíalo por WhatsApp</a>.";
+            } finally {
+                btn.disabled = false;
+                btn.classList.remove('opacity-60');
+            }
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
+        // Initialize on Load
+        window.onload = function () {
+            updateCalculator();
+        };
+    </script>
+</body>
+</html>
